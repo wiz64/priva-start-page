@@ -1,0 +1,46 @@
+{
+        "title" : "Priva StartPage",
+        "description" : "The home of Privacy",
+        "icon_path" : "icon.png",
+        "rows" : [
+                    {"name":"Internet", 
+                            "items":[
+                                {"id":"searx",
+                                "name":"Searx.ru",
+                                "url":"https://searx.ru/",
+                                "icon_path":"searx.png"},
+
+                                {"id":"whoogle",
+                                "name":"Whoogle",
+                                "url":"https://search.albony.xyz/",
+                                "icon_path":"whoogle.png"},
+
+                                {"id":"privatebin",
+                                "name":"Privatebin (Garuda)",
+                                "url":"https://bin.garudalinux.org/",
+                                "icon_path":"privatebin.png"},
+
+                                {"id":"invidious",
+                                "name":"Invidious (Garuda)",
+                                "url":"https://invidious.garudalinux.org/",
+                                "icon_path":"invidious.png"},
+                                
+                                {"id":"piped",
+                                "name":"Piped (Garuda)",
+                                "url":"https://piped.garudalinux.org/",
+                                "icon_path":"piped.png"} ]},
+
+                    {"name":"About", 
+                            "items":[
+                                {"id":"priva",
+                                "name":"Priva Startpage(github)",
+                                "url":"https://github.com/wiz64/priva-startpage",
+                                "icon_path":"priva.png"},
+
+                                {"id":"wiz64-site",
+                                "name":"Wiz64's Site",
+                                "url":"https://wiz64.com",
+                                "icon_path":"wiz64.png"}]}
+                    
+                ]
+    }

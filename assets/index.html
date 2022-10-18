@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Powered by Priva Startpage-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>{{title}}</title>
+        <meta name="description" content="{{description}}">
+    </head>
+    <body>
+        <h1>{{title}}</h1>
+        <p>{{description}}</p>
+        <!-- display all rows, their names and all items inside them with links -->
+        <ul>
+            {{#rows}}
+            <li>
+                <h1>{{name}}</h1>
+                <ul>
+                    {{#items}}
+                    <li id="{{id}}">
+                        <h3>
+                        <a href="{{url}}">{{name}}</a>
+                        </h3>
+                    </li>
+                    {{/items}}
+                </ul>
+            </li>
+            {{/rows}}
+    </body>
+
+</html>

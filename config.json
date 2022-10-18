@@ -1,0 +1,5 @@
+{
+    "name": "Priva Startpage",
+    "port": 3000,
+    "domains" : ["privastartpage.tk","www.privastartpage.tk"]
+}
