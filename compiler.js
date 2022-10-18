@@ -33,6 +33,12 @@ function compileAll() {
     const files = fs.readdirSync('assets');
     // filter out files that don't end with .html and also those html files that don't have a corresponding json file
     const filtered_files = files.filter(file => IfEndswith(file, ['.html']) && fs.existsSync('assets/'+file.slice(0,-5)+".json"));
+    
+    // create public_html folder if it doesn't exist
+    if (!fs.existsSync('public_html')) {
+        fs.mkdirSync('public_html');
+    }
+
     // compile each file
     filtered_files.forEach(file => {
         compile(file.slice(0, -5));
