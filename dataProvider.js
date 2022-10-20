@@ -26,7 +26,11 @@ function readconfig() {
     } catch(err) { console.log(" -- X -- Failed to read config.json file..."); exit(); }
 }
 
+function defaultData() {
+    return {poweredByLink: "<a href='https://github.com/wiz64/priva-startpage' target='_blank'>Powered By Priva Startpage</a>"}
+}
 
 
  module.exports.data = readData;
  module.exports.config = readconfig();
+ module.exports.defaultData = defaultData;

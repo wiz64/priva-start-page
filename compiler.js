@@ -19,7 +19,9 @@ function IfEndswith(string, array) {
 function compile(filename) {
     console.log(" - Compiling -> "+filename)
     // get data
+    const defaultData = dataProvider.defaultData();
     const data = dataProvider.data(filename+'.json');
+    Object.assign(data, defaultData);
     // get template
     const template = templateProvider.template(filename+'.html');
     // compile template
