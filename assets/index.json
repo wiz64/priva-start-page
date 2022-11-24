@@ -2,6 +2,7 @@
         "title" : "Priva StartPage",
         "description" : "The home of Privacy",
         "icon_path" : "icon.png",
+        "newtab":"true",
         "rows" : [
                     {"name":"Internet", 
                             "items":[

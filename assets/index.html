@@ -6,32 +6,105 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>{{title}}</title>
         <meta name="description" content="{{description}}">
+        <script>
+             document.documentElement.setAttribute("data-theme", "dark");
+            </script>
+        <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+        
     </head>
     <body>
-        <h1>{{title}}</h1>
-        <p>{{description}}</p>
+    <header class="priva-header">
+        <nav>
+        <ul>
+          <li style="font-family:'Courier New', Courier, monospace;padding-top: 0px;padding-bottom: 0px;"><strong>{{title}}</strong><p>{{description}}</p></li>
+        </ul>
+        
+        <ul class="nav-colors">
+          <li><a href="#">Link</a></li>
+          <li><a href="#">Link</a></li>
+          <li><a href="#" role="button">Button</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="priva-content">
         <!-- display all rows, their names and all items inside them with links -->
         <ul>
             {{#rows}}
-            <li>
-                <h1>{{name}}</h1>
-                <ul>
-                    {{#items}}
-                    <li id="{{id}}">
-                        <h3>
-                        <a href="{{url}}">{{name}}</a>
-                        </h3>
-                    </li>
-                    {{/items}}
-                </ul>
-            </li>
+                <nav aria-label="breadcrumb"><ul><li>{{name}}</li></ul></nav> 
+                <div class="grid">
+                  {{#items}}
+                    <article class="card-item">
+                        <h5 class="card-head"><a href="{{url}}">{{id}}</a></h5>
+                        <p>
+                            here is some description..
+                        </p>
+                        <footer class="card-item-footer" style="padding:10px 5px">
+                        <a href="{{url}}" {{#if @root.newtab}}target="_blank"{{/if}} role="button" style="font-size:14px;--primary: #3949ab;">{{name}}</a>
+                        </footer>
+                    </article>
+                   
+                  {{/items}}
+                </div>  
+            
             {{/rows}}
         </ul>
-
+    
         <hr />
         <footer>
-                <p>{{{poweredByLink}}}</p>
+            <center>
+                <p>{{{poweredByLink}}} | Designed by wiz64</p>
+            </center>
         </footer>
+    </div>
+    <style>
+            .title {
+                text-align: center;
+            }
+            .priva-content {
+                max-width: 90%;
+                margin: auto;
+                
+            }
+            .priva-header {
+                font-family: 'Courier New', Courier, monospace;
+                width: 90%;
+                margin: 0 auto;
+                padding: 10px 0px;
+            }
+            
+.article-title {
+    font-weight: 600;
+    margin: 0;
+    color: var(--card-text-color-main);
+    font-size: 1.2rem;
+}
+
+.card-item {
+   
+    font-size: 0.875em; /* 14px/16=0.875em */
+    margin-top: 6px;
+    margin-bottom: 6px;
+}
+
+.nav-colors {
+        --primary: #43a047;--primary: #43a047;
+        --primary-hover: #388e3c;
+        --primary-focus: rgba(67, 160, 71, 0.125);
+        --primary-inverse: #FFF;
+}
+.card-head {
+    margin-bottom: 3px;
+}
+@media only screen and (max-width: 600px) {
+    .card-item {
+    max-width: 100%
+}
+}
+
+:root {
+  --primary: #d81b60;
+}
+        </style>
     </body>
 
 </html>
